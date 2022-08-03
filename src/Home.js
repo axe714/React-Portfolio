@@ -9,8 +9,8 @@ import Footer from './components/Footer'
 
 export default function renderHome() {
     return (
-        <div className="bg-slate-500 text-9xl">
-          <p>TEST!</p>
+        <div className="bg-white">
+          <Navbar />
         </div>
       );
 }
