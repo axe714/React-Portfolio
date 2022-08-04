@@ -11,6 +11,7 @@ export default function renderHome() {
     return (
         <div className="bg-white">
           <Navbar />
+          <Hero />
         </div>
       );
 }

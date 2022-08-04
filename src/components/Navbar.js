@@ -11,6 +11,9 @@ export default function Navbar() {
     setActive(!isActive)
   };
 
+  const lgNav = `font-['Manrope'] py-5 px-12 text-gray-700 transform hover:scale-110 hover:text-blue-500 transition-all`
+  const smNav = `font-['Manrope'] block py-2 px-4 text-sm hover:bg-sky-100 hover:text-blue-900 transition-all`
+
   return (
     <nav className="bg-white">
         <div className="mx-auto px-3">
@@ -23,11 +26,11 @@ export default function Navbar() {
 
                 {/* large screen nav */}
                 <div id="main-navbar" className="hidden md:flex">
-                    <a href="#" id="navbar-1" className="font-['Manrope'] py-5 px-12 text-gray-700 transform hover:scale-110 hover:text-blue-500 transition-all">About Me</a>
-                    <a href="#" id="navbar-2" className="font-['Manrope'] py-5 px-12 text-gray-700 transform hover:scale-110 hover:text-blue-500 transition-all">Skills</a>
-                    <a href="#" id="navbar-3" className="font-['Manrope'] py-5 px-12 text-gray-700 transform hover:scale-110 hover:text-blue-500 transition-all">Projects</a>
-                    <a href="#" id="navbar-4" className="font-['Manrope'] py-5 px-12 text-gray-700 transform hover:scale-110 hover:text-blue-500 transition-all">Resume</a>
-                    <a href="#" id="navbar-5" className="font-['Manrope'] py-5 px-12 text-gray-700 transform hover:scale-110 hover:text-blue-500 transition-all">Contact Me</a>
+                    <a href="#" id="navbar-1" className={lgNav}>About Me</a>
+                    <a href="#" id="navbar-2" className={lgNav}>Skills</a>
+                    <a href="#" id="navbar-3" className={lgNav}>Projects</a>
+                    <a href="#" id="navbar-4" className={lgNav}>Resume</a>
+                    <a href="#" id="navbar-5" className={lgNav}>Contact Me</a>
                 </div>
 
                 {/* mobile button */}
@@ -41,11 +44,11 @@ export default function Navbar() {
 
         {/* mobile nav */}
         <div ref={mobileMenu} className={isActive ? "hidden md:hidden" : "md:hidden"}>
-            <a href="#" className="font-['Manrope'] block py-2 px-4 text-sm hover:bg-sky-100 hover:text-blue-900 transition-all">About Me</a>
-            <a href="#" className="font-['Manrope'] block py-2 px-4 text-sm hover:bg-sky-100 hover:text-blue-900 transition-all">Skills</a>
-            <a href="#" className="font-['Manrope'] block py-2 px-4 text-sm hover:bg-sky-100 hover:text-blue-900 transition-all">Projects</a>
-            <a href="#" className="font-['Manrope'] block py-2 px-4 text-sm hover:bg-sky-100 hover:text-blue-900 transition-all">Resume</a>
-            <a href="#" className="font-['Manrope'] block py-2 px-4 text-sm hover:bg-sky-100 hover:text-blue-900 transition-all">Contact Me</a>
+            <a href="#" className={smNav}>About Me</a>
+            <a href="#" className={smNav}>Skills</a>
+            <a href="#" className={smNav}>Projects</a>
+            <a href="#" className={smNav}>Resume</a>
+            <a href="#" className={smNav}>Contact Me</a>
         </div>
     </nav>
   )
