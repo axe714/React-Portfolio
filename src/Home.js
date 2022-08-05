@@ -14,6 +14,8 @@ export default function renderHome() {
       <Hero />
       <AboutMe />
       <TechStack />
+      <Projects />
+      <Footer />
     </div>
   );
 }

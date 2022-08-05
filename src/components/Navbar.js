@@ -25,7 +25,7 @@ export default function Navbar() {
                 </div>
 
                 {/* large screen nav */}
-                <div id="main-navbar" className="hidden lg:flex md:space-x-5">
+                <div id="main-navbar" className="hidden space-x-5 lg:flex">
                     <a href="#" id="navbar-1" className={lgNav}>About Me</a>
                     <a href="#" id="navbar-2" className={lgNav}>Skills</a>
                     <a href="#" id="navbar-3" className={lgNav}>Projects</a>
