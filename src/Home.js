@@ -15,6 +15,7 @@ export default function renderHome() {
       <AboutMe />
       <TechStack />
       <Projects />
+      <ContactForm />
       <Footer />
     </div>
   );
