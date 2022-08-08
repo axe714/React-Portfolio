@@ -46,20 +46,18 @@ export default function TechStack() {
         },
       });
     }
-    // elements are hidden when NOT in view.
+    // elements are hidden when NOT in view (-100vw = pushed LEFT, 100vw = pushed RIGHT).
     if (!inView) {
       animation1.start({ x: "-100vw" });
-      animation2.start({ x: "100vw"})
+      animation2.start({ x: "100vw" });
     }
   }, [inView]);
 
   return (
-    <div
-      ref={ref}
-      className="bg-white grid grid-rows-3 -mt-48 mx-8 divide-y md:grid-rows-none md:grid-cols-3 md:mx-16 md:divide-x rounded-lg outline outline-sky-100"
-    >
+    <div className="bg-white grid grid-rows-3 -mt-48 mx-8 divide-y md:grid-rows-none md:grid-cols-3 md:mx-16 md:divide-x rounded-lg outline outline-sky-100">
       <div className="flex flex-col place-items-center md:justify-center md:items-center text-center h-auto py-5 px-5">
         <span
+          ref={ref}
           id="stack-title-1"
           className="font-['Manrope'] font-bold text-blue-900 pb-8 text-2xl"
         >
@@ -70,36 +68,51 @@ export default function TechStack() {
           className="grid grid-cols-2 gap-x-10 gap-y-5 md:gap-x-14 md:gap-y-5"
           animate={animation1}
         >
-          <img
+          <motion.img
             src={HtmlLogo}
             alt="HTML-Logo"
             className="max-h-20 md:max-h-20"
+            whileHover={{ scale: 1.2 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
           />
-          <img src={CSSLogo} alt="CSS-Logo" className="max-h-20 md:max-h-20" />
-          <img
+          <motion.img
+            src={CSSLogo}
+            alt="CSS-Logo"
+            className="max-h-20 md:max-h-20"
+            whileHover={{ scale: 1.2 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+          />
+          <motion.img
             src={JavascriptLogo}
             alt="Javascript-Logo"
             className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
           />
-          <img
+          <motion.img
             src={BootstrapLogo}
             alt="Bootstrap-Logo"
             className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
           />
-          <img
+          <motion.img
             src={HandlebarsLogo}
             alt="Handlebars-Logo"
             className="w-20 h-16"
+            whileHover={{ scale: 1.2 }}
           />
-          <img
+          <motion.img
             src={TailwindLogo}
             alt="Tailwind-Logo"
             className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
           />
         </motion.div>
       </div>
 
       <div
+        ref={ref}
         className="flex flex-col place-items-center text-center h-auto px-5"
       >
         <span
@@ -113,30 +126,35 @@ export default function TechStack() {
           className="grid grid-cols-2 gap-x-8 md:gap-x-12 gap-y-5"
           animate={animation2}
         >
-          <img
+          <motion.img
             src={ExpressLogo}
             alt="Express-Logo"
             className="h-12 w-24 md:max-w-24 md:max-h-20"
+            whileHover={{ scale: 1.2 }}
           />
-          <img
+          <motion.img
             src={NodeLogo}
             alt="NodeJS-Logo"
             className="max-h-16 max-w-24 md:max-w-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
           />
-          <img
+          <motion.img
             src={MongoDbLogo}
             alt="MongoDB-Logo"
             className="max-h-16 md:max-h-20"
+            whileHover={{ scale: 1.2 }}
           />
-          <img
+          <motion.img
             src={MySqlLogo}
             alt="MySQL-Logo"
             className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
           />
         </motion.div>
       </div>
 
       <div
+        ref={ref}
         className="flex flex-col place-items-center text-center h-auto px-5"
       >
         <span
@@ -150,15 +168,17 @@ export default function TechStack() {
           className="grid grid-cols-2 gap-x-12 gap-y-5"
           animate={animation1}
         >
-          <img
+          <motion.img
             src={GithubLogo}
             alt="Github-Logo"
             className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
           />
-          <img
+          <motion.img
             src={SlackLogo}
             alt="Slack-Logo"
             className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
           />
         </motion.div>
       </div>
