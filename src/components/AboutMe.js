@@ -12,7 +12,7 @@ export default function AboutMe() {
       </div>
       <span
         id="about-me-text"
-     className="flex justify-center font-['Poppins'] text-xl text-black"
+        className="flex justify-center font-['Poppins'] text-xl text-black"
       >
         <p className="pt-4 lg:px-64 text-center font-bold text-white leading-tight">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
