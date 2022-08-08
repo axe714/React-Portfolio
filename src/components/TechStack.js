@@ -23,6 +23,7 @@ export default function TechStack() {
   });
   const animation1 = useAnimation();
   const animation2 = useAnimation();
+  const animation3 = useAnimation();
 
   //we use the useEffect hook here to invoke a function when the state of an element CHANGES. We set [inView] as the parameter to monitor
   // so that ONLY when an element is [inView] === true, then the function below is invoked.
@@ -43,6 +44,16 @@ export default function TechStack() {
           type: "spring",
           duration: 1,
           bounce: 0.3,
+          delay: 0.25,
+        },
+      });
+      animation3.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.3,
+          delay: 0.25,
         },
       });
     }
@@ -50,6 +61,7 @@ export default function TechStack() {
     if (!inView) {
       animation1.start({ x: "-100vw" });
       animation2.start({ x: "100vw" });
+      animation3.start({ x: "-100vw" });
     }
   }, [inView]);
 
@@ -73,16 +85,12 @@ export default function TechStack() {
             alt="HTML-Logo"
             className="max-h-20 md:max-h-20"
             whileHover={{ scale: 1.2 }}
-            onHoverStart={(e) => {}}
-            onHoverEnd={(e) => {}}
           />
           <motion.img
             src={CSSLogo}
             alt="CSS-Logo"
             className="max-h-20 md:max-h-20"
             whileHover={{ scale: 1.2 }}
-            onHoverStart={(e) => {}}
-            onHoverEnd={(e) => {}}
           />
           <motion.img
             src={JavascriptLogo}
@@ -166,7 +174,7 @@ export default function TechStack() {
         <motion.div
           id="stack-icons-3"
           className="grid grid-cols-2 gap-x-12 gap-y-5"
-          animate={animation1}
+          animate={animation3}
         >
           <motion.img
             src={GithubLogo}

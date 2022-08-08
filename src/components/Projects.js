@@ -1,4 +1,7 @@
 import React from "react";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import OldEggImg from "../images/oldegg-landing-page.png";
 import StargazerImg from "../images/stargazer-demo.png";
 import TechSpotImg from "../images/tech-spot-demo.jpg";
