@@ -12,8 +12,8 @@ import WeatherTrackerImg from "../images/weathertracker-demo.png";
 export default function Projects() {
   // we use this use in view hook that sets a boolean to TRUE or FALSE if element that has ref={ref} is in view or not
   const { ref, inView } = useInView({
-    // 20% of the element must be present for animation to start
-    threshold: 0.2,
+    // 10% of the element must be present for animation to start
+    threshold: .10,
   });
   const animation1 = useAnimation();
   const animation2 = useAnimation();
