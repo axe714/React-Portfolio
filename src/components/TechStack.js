@@ -28,7 +28,6 @@ export default function TechStack() {
   //we use the useEffect hook here to invoke a function when the state of an element CHANGES. We set [inView] as the parameter to monitor
   // so that ONLY when an element is [inView] === true, then the function below is invoked.
   useEffect(() => {
-    console.log("use effect hook, inView = ", inView);
     if (inView) {
       animation1.start({
         x: 0,
@@ -36,6 +35,7 @@ export default function TechStack() {
           type: "spring",
           duration: 1,
           bounce: 0.3,
+          damping: 20
         },
       });
       animation2.start({
@@ -45,6 +45,7 @@ export default function TechStack() {
           duration: 1,
           bounce: 0.3,
           delay: 0.25,
+          damping: 20
         },
       });
       animation3.start({
@@ -53,7 +54,8 @@ export default function TechStack() {
           type: "spring",
           duration: 1,
           bounce: 0.3,
-          delay: 0.25,
+          delay: 0.5,
+          damping: 20
         },
       });
     }
@@ -66,7 +68,7 @@ export default function TechStack() {
   }, [inView]);
 
   return (
-    <div className="bg-white grid grid-rows-3 -mt-48 mx-8 divide-y md:grid-rows-none md:grid-cols-3 md:mx-16 md:divide-x rounded-lg outline outline-sky-100">
+    <div id="tech-stack-container" className="bg-white grid grid-rows-3 -mt-48 mx-8 divide-y md:grid-rows-none md:grid-cols-3 md:mx-16 md:divide-x rounded-lg outline outline-sky-100">
       <div className="flex flex-col place-items-center md:justify-center md:items-center text-center h-auto py-5 px-5">
         <span
           ref={ref}

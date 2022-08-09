@@ -2,10 +2,10 @@ import React from "react";
 
 export default function AboutMe() {
   return (
-    <div className="z-0 bg-blue-900 pt-24 pb-64 sm:pb-80 px-8 flex-col">
+    <div id="about-me-container" className="z-0 bg-blue-900 pt-24 pb-64 sm:pb-80 px-8 flex-col">
       <div className="flex justify-center text-center">
         <h2 className="text-4xl font-bold font-['Poppins'] text-white leading-tight">
-          <span id="about-me-name" className="text-4xl">
+          <span className="text-4xl">
             Hi, I'm Allec. Nice to meet you.
           </span>
         </h2>

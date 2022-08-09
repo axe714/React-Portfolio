@@ -23,7 +23,6 @@ export default function Projects() {
   const animation6 = useAnimation();
 
   useEffect(() => {
-    console.log("use effect hook, inView = ", inView);
     if (inView) {
       animation1.start({
         x: 0,
@@ -31,6 +30,7 @@ export default function Projects() {
           type: "spring",
           duration: 1,
           bounce: 0.3,
+          damping: 15
         },
       });
       animation2.start({
@@ -40,6 +40,7 @@ export default function Projects() {
           duration: 1,
           bounce: 0.3,
           delay: 0.25,
+          damping: 15
         },
       });
       animation3.start({
@@ -48,7 +49,8 @@ export default function Projects() {
           type: "spring",
           duration: 1,
           bounce: 0.3,
-          delay: 0.35,
+          delay: 0.5,
+          damping: 15
         },
       });
       animation4.start({
@@ -57,7 +59,8 @@ export default function Projects() {
           type: "spring",
           duration: 1,
           bounce: 0.3,
-          delay: 0.45,
+          delay: 0.75,
+          damping: 15
         },
       });
       animation5.start({
@@ -66,7 +69,8 @@ export default function Projects() {
           type: "spring",
           duration: 1,
           bounce: 0.3,
-          delay: 0.55,
+          delay: 1,
+          damping: 15
         },
       });
       animation6.start({
@@ -75,11 +79,11 @@ export default function Projects() {
           type: "spring",
           duration: 1,
           bounce: 0.3,
-          delay: 0.65,
+          delay: 1.25,
+          damping: 15
         },
       });
     }
-    // elements are hidden when NOT in view (-100vw = pushed LEFT, 100vw = pushed RIGHT).
     if (!inView) {
       animation1.start({ x: "-100vw" });
       animation2.start({ x: "-100vw" });
@@ -91,7 +95,7 @@ export default function Projects() {
   }, [inView]);
 
   return (
-    <div className="mt-16 md:mt-24 md:mx-16">
+    <div id="projects-container" className="mt-16 md:mt-24 md:mx-16">
       <div className="flex justify-center text-center">
         <h2
           id="projects-header"
