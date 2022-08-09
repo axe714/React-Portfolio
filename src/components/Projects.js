@@ -117,7 +117,7 @@ export default function Projects() {
           id="projects-header"
           className="mb-16 text-4xl font-['Manrope'] font-bold text-blue-900 leading-tight"
         >
-          <span className="text-3xl">My Recent Work</span>
+          <motion.span className="text-3xl">My Recent Work</motion.span>
         </h2>
       </div>
 

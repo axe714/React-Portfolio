@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 const contactVariants = {
   hidden: {
     opacity: 0,
-    x: 100,
+    y: 100,
   },
   show: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       type: "spring",
@@ -27,7 +27,7 @@ export default function ContactForm() {
       initial="hidden"
       whileInView="show"
     >
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto" >
+      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
         <div className="absolute inset-0 bg-blue-900 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
         <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
           <div className="max-w-md mx-auto">
