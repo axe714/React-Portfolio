@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="flex space-x-3">
             <a
               id="navbar-logo"
-              href="#"
+              href="/"
               className="flex items-center py-5 px-2 text-gray-800 md:pr-12"
             >
               <span className="font-['Pacifico'] text-3xl font-black hover:text-blue-900 transition-all">
@@ -33,7 +33,11 @@ export default function Navbar() {
 
           {/* large screen nav */}
           <div id="main-navbar" className="hidden lg:flex md:space-x-5">
-            <motion.a href="#about-me-container" id="navbar-1" className={lgNav} transition={{ type: "spring", stiffness: 100 }}>
+            <motion.a
+              href="#about-me-container"
+              id="navbar-1"
+              className={lgNav}
+            >
               About Me
             </motion.a>
             <a href="#tech-stack-container" id="navbar-2" className={lgNav}>
@@ -45,7 +49,7 @@ export default function Navbar() {
             <a href="#" id="navbar-4" className={lgNav}>
               Resume
             </a>
-            <a href="#" id="navbar-5" className={lgNav}>
+            <a href="#contact-me-container" id="navbar-5" className={lgNav}>
               Contact Me
             </a>
           </div>
@@ -77,19 +81,19 @@ export default function Navbar() {
         ref={mobileMenu}
         className={isActive ? "hidden lg:hidden" : "lg:hidden"}
       >
-        <a href="#" className={smNav}>
+        <a href="#about-me-container" className={smNav}>
           About Me
         </a>
-        <a href="#" className={smNav}>
+        <a href="#tech-stack-container" className={smNav}>
           Skills
         </a>
-        <a href="#" className={smNav}>
+        <a href="#projects-container" className={smNav}>
           Projects
         </a>
         <a href="#" className={smNav}>
           Resume
         </a>
-        <a href="#" className={smNav}>
+        <a href="#contact-me-container" className={smNav}>
           Contact Me
         </a>
       </div>

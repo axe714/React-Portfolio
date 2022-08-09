@@ -1,7 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import OldEggImg from "../images/oldegg-landing-page.png";
 import StargazerImg from "../images/stargazer-demo.png";
 import TechSpotImg from "../images/tech-spot-demo.jpg";
@@ -10,90 +8,81 @@ import EmployeeTrackerImg from "../images/employee-tracker-demo.jpg";
 import WeatherTrackerImg from "../images/weathertracker-demo.png";
 
 export default function Projects() {
-  // we use this use in view hook that sets a boolean to TRUE or FALSE if element that has ref={ref} is in view or not
-  const { ref, inView } = useInView({
-    // 10% of the element must be present for animation to start
-    threshold: .10,
-  });
-  const animation1 = useAnimation();
-  const animation2 = useAnimation();
-  const animation3 = useAnimation();
-  const animation4 = useAnimation();
-  const animation5 = useAnimation();
-  const animation6 = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation1.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          damping: 15
-        },
-      });
-      animation2.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          delay: 0.25,
-          damping: 15
-        },
-      });
-      animation3.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          delay: 0.5,
-          damping: 15
-        },
-      });
-      animation4.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          delay: 0.75,
-          damping: 15
-        },
-      });
-      animation5.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          delay: 1,
-          damping: 15
-        },
-      });
-      animation6.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          delay: 1.25,
-          damping: 15
-        },
-      });
-    }
-    if (!inView) {
-      animation1.start({ x: "-100vw" });
-      animation2.start({ x: "-100vw" });
-      animation3.start({ x: "-100vw" });
-      animation4.start({ x: "-100vw" });
-      animation5.start({ x: "-100vw" });
-      animation6.start({ x: "-100vw" });
-    }
-  }, [inView]);
-
+  const projectsVariant = {
+    left: {
+      opacity: 0,
+      x: -100,
+    },
+    right: {
+      opacity: 0,
+      x: 100,
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1,
+        bounce: 0.3,
+        damping: 15,
+      },
+    },
+    show2: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1,
+        bounce: 0.3,
+        damping: 15,
+        delay: 0.25
+      },
+    },
+    show3: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1,
+        boune: 0.3,
+        damping: 15,
+        delay: .45
+      }
+    },
+    show4: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1,
+        boune: 0.3,
+        damping: 15,
+        delay: .65
+      }
+    },
+    show5: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1,
+        boune: 0.3,
+        damping: 15,
+        delay: 0.85
+      }
+    },
+    show6: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1,
+        boune: 0.3,
+        damping: 15,
+        delay: 1.05
+      }
+    },
+  };
   return (
     <div id="projects-container" className="mt-16 md:mt-24 md:mx-16">
       <div className="flex justify-center text-center">
@@ -106,13 +95,14 @@ export default function Projects() {
       </div>
 
       <div
-        ref={ref}
         className="grid grid-row place-items-center mx-8 gap-y-4 gap-x-4 md:grid-cols-3 md:mx-2"
       >
         <motion.div
           id="project-1"
           className="max-w-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-          animate={animation1}
+          variants={projectsVariant}
+          initial="left"
+          whileInView="show"
         >
           <a href="https://oldegg.herokuapp.com/">
             <img
@@ -155,7 +145,9 @@ export default function Projects() {
         <motion.div
           id="project-2"
           className="max-w-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-          animate={animation2}
+          variants={projectsVariant}
+          initial="right"
+          whileInView="show2"
         >
           <a href="https://github.com/axe714/StarGazer">
             <img
@@ -199,7 +191,9 @@ export default function Projects() {
         <motion.div
           id="project-3"
           className="max-w-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-          animate={animation3}
+          variants={projectsVariant}
+          initial="left"
+          whileInView="show3"
         >
           <a href="https://peaceful-sands-08318.herokuapp.com/">
             <img
@@ -243,7 +237,9 @@ export default function Projects() {
         <motion.div
           id="project-4"
           className="max-w-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-          animate={animation4}
+          variants={projectsVariant}
+          initial="right"
+          whileInView="show4"
         >
           <a href="https://github.com/axe714/Team-Profile-Generator">
             <img
@@ -286,7 +282,9 @@ export default function Projects() {
         <motion.div
           id="project-5"
           className="max-w-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-          animate={animation5}
+          variants={projectsVariant}
+          initial="left"
+          whileInView="show5"
         >
           <a href="https://github.com/axe714/Employee-Tracker">
             <img
@@ -330,7 +328,9 @@ export default function Projects() {
         <motion.div
           id="project-6"
           className="max-w-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-          animate={animation6}
+          variants={projectsVariant}
+          initial="right"
+          whileInView="show6"
         >
           <a href="https://github.com/axe714/Weather-Tracker">
             <img
