@@ -1,9 +1,33 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const contactVariants = {
+  hidden: {
+    opacity: 0,
+    x: 100,
+  },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1,
+      bounce: 0.3,
+      damping: 15,
+    },
+  },
+};
 
 export default function ContactForm() {
   return (
-    <div id="contact-me-container" className="min-h-lg bg-white pt-32 pb-12 flex flex-col justify-center">
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+    <motion.div
+      id="contact-me-container"
+      className="min-h-lg bg-white pt-32 pb-12 flex flex-col justify-center"
+      variants={contactVariants}
+      initial="hidden"
+      whileInView="show"
+    >
+      <div className="relative py-3 sm:max-w-xl sm:mx-auto" >
         <div className="absolute inset-0 bg-blue-900 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
         <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
           <div className="max-w-md mx-auto">
@@ -69,6 +93,6 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

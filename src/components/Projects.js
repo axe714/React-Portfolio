@@ -52,7 +52,7 @@ const projects = [
 ];
 
 const projectsVariant = {
-  left: {
+  hidden: {
     opacity: 0,
     x: -100,
   },
@@ -71,11 +71,11 @@ const projectsVariant = {
 const works = projects.map((work) => (
   <motion.div
     className="max-w-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-    initial={projectsVariant.left}
+    initial={projectsVariant.hidden}
     whileInView={projectsVariant.show}
   >
     <a href={work.link}>
-      <img className="min-w-md rounded-t-lg" src={work.image} alt={work.name}  />
+      <img className="min-w-md rounded-t-lg" src={work.image} alt={work.name} />
     </a>
     <div className="p-5">
       <a href={work.link}>

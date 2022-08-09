@@ -15,6 +15,42 @@ export default function Navbar() {
   const lgNav = `font-['Manrope'] text-lg py-5 px-12 text-gray-700 transform hover:scale-110 hover:text-blue-500 transition-all`;
   const smNav = `font-['Manrope'] text-md md:text-lg block py-2 px-4 hover:bg-sky-100 hover:text-blue-900 transition-all`;
 
+  const navVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        delay: 0.15,
+      },
+    },
+    show2: {
+      opacity: 1,
+      transition: {
+        delay: 0.25,
+      },
+    },
+    show3: {
+      opacity: 1,
+      transition: {
+        delay: 0.35,
+      },
+    },
+    show4: {
+      opacity: 1,
+      transition: {
+        delay: 0.45,
+      },
+    },
+    show5: {
+      opacity: 1,
+      transition: {
+        delay: 0.55,
+      },
+    },
+  };
+
   return (
     <nav className="bg-white">
       <div className="mx-auto px-3">
@@ -25,9 +61,14 @@ export default function Navbar() {
               href="/"
               className="flex items-center py-5 px-2 text-gray-800 md:pr-12"
             >
-              <span className="font-['Pacifico'] text-3xl font-black hover:text-blue-900 transition-all">
+              <motion.span
+                className="font-['Pacifico'] text-3xl font-black hover:text-blue-900 transition-all"
+                variants={navVariants}
+                initial="hidden"
+                whileInView="show"
+              >
                 Allec Arzadon
-              </span>
+              </motion.span>
             </a>
           </div>
 
@@ -37,21 +78,52 @@ export default function Navbar() {
               href="#about-me-container"
               id="navbar-1"
               className={lgNav}
+              variants={navVariants}
+              initial="hidden"
+              whileInView="show"
             >
               About Me
             </motion.a>
-            <a href="#tech-stack-container" id="navbar-2" className={lgNav}>
+            <motion.a
+              href="#tech-stack-container"
+              id="navbar-2"
+              className={lgNav}
+              variants={navVariants}
+              initial="hidden"
+              whileInView="show2"
+            >
               Skills
-            </a>
-            <a href="#projects-container" id="navbar-3" className={lgNav}>
+            </motion.a>
+            <motion.a
+              href="#projects-container"
+              id="navbar-3"
+              className={lgNav}
+              variants={navVariants}
+              initial="hidden"
+              whileInView="show3"
+            >
               Projects
-            </a>
-            <a href="#" id="navbar-4" className={lgNav}>
+            </motion.a>
+            <motion.a
+              href="#"
+              id="navbar-4"
+              className={lgNav}
+              variants={navVariants}
+              initial="hidden"
+              whileInView="show4"
+            >
               Resume
-            </a>
-            <a href="#contact-me-container" id="navbar-5" className={lgNav}>
+            </motion.a>
+            <motion.a
+              href="#contact-me-container"
+              id="navbar-5"
+              className={lgNav}
+              variants={navVariants}
+              initial="hidden"
+              whileInView="show5"
+            >
               Contact Me
-            </a>
+            </motion.a>
           </div>
 
           {/* mobile button */}
