@@ -18,34 +18,45 @@ export default function Navbar() {
   const navVariants = {
     hidden: {
       opacity: 0,
+      x: -100
     },
     show: {
       opacity: 1,
+      x: 0,
       transition: {
+        type:"tweening",
         delay: 0.15,
       },
     },
     show2: {
       opacity: 1,
+      x:0,
       transition: {
+        type:"tweening",
         delay: 0.25,
       },
     },
     show3: {
       opacity: 1,
+      x:0,
       transition: {
+        type:"tweening",
         delay: 0.35,
       },
     },
     show4: {
       opacity: 1,
+      x:0,
       transition: {
+        type:"tweening",
         delay: 0.45,
       },
     },
     show5: {
       opacity: 1,
+      x:0,
       transition: {
+        type:"tweening",
         delay: 0.55,
       },
     },

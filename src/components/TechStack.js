@@ -27,32 +27,26 @@ export default function TechStack() {
       x: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "tweening",
         duration: 1,
-        bounce: 0.3,
-        damping: 15,
       },
     },
     show2: {
       x: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "tweening",
         duration: 1,
-        bounce: 0.3,
-        damping: 15,
-        delay: 0.25
+        delay: 0.2
       },
     },
     show3: {
       x: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "tweening",
         duration: 1,
-        boune: 0.3,
-        damping: 15,
-        delay: .5
+        delay: .4
       }
     }
   };
