@@ -3,6 +3,21 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+const navItems = [
+  {
+    name: "Home",
+    link: "/"
+  },
+  {
+    name: "Resume",
+    link: "#"
+  },
+  {
+    name: "Contact Me",
+    link: "/contactme"
+  }
+]
+
 const contactVariants = {
   hidden: {
     opacity: 0,
@@ -35,7 +50,7 @@ const childrenVariants = {
 export default function ContactForm() {
   return (
     <>
-      <Navbar />
+      <Navbar navItems={navItems}/>
       <motion.div
         id="contact-me-container"
         className="min-h-xl py-48 lg:min-h-screen bg-white lg:py-0 flex flex-col justify-center"
