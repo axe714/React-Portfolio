@@ -77,6 +77,7 @@ export default function Navbar() {
                 variants={navVariants}
                 initial="hidden"
                 whileInView="show"
+                viewport={{once:true}}
               >
                 Allec Arzadon
               </motion.span>
@@ -92,6 +93,7 @@ export default function Navbar() {
               variants={navVariants}
               initial="hidden"
               whileInView="show"
+              viewport={{once:true}}
             >
               About Me
             </motion.a>
@@ -102,6 +104,7 @@ export default function Navbar() {
               variants={navVariants}
               initial="hidden"
               whileInView="show2"
+              viewport={{once:true}}
             >
               Skills
             </motion.a>
@@ -112,6 +115,7 @@ export default function Navbar() {
               variants={navVariants}
               initial="hidden"
               whileInView="show3"
+              viewport={{once:true}}
             >
               Projects
             </motion.a>
@@ -122,6 +126,7 @@ export default function Navbar() {
               variants={navVariants}
               initial="hidden"
               whileInView="show4"
+              viewport={{once:true}}
             >
               Resume
             </motion.a>
@@ -132,6 +137,7 @@ export default function Navbar() {
               variants={navVariants}
               initial="hidden"
               whileInView="show5"
+              viewport={{once:true}}
             >
               Contact Me
             </motion.a>

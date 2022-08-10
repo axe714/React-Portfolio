@@ -6,12 +6,16 @@ import JavascriptLogo from "../images/icons/javascript.svg";
 import BootstrapLogo from "../images/icons/bootstrap.svg";
 import HandlebarsLogo from "../images/icons/handlebars.svg";
 import TailwindLogo from "../images/icons/tailwind.png";
+import ReactLogo from "../images/icons/react.svg";
 import ExpressLogo from "../images/icons/express.svg";
 import NodeLogo from "../images/icons/nodejs.svg";
 import MySqlLogo from "../images/icons/mysql.svg";
 import MongoDbLogo from "../images/icons/mongodb.svg";
+import GraphqlLogo from "../images/icons/graphql.svg";
 import GithubLogo from "../images/icons/github.svg";
 import SlackLogo from "../images/icons/slack.svg";
+import InsomniaLogo from "../images/icons/insomnia.svg";
+import FramerLogo from "../images/icons/framer.svg";
 
 export default function TechStack() {
   const stackVariants = {
@@ -37,7 +41,7 @@ export default function TechStack() {
       transition: {
         type: "tweening",
         duration: 1,
-        delay: 0.2
+        delay: 0.2,
       },
     },
     show3: {
@@ -46,9 +50,9 @@ export default function TechStack() {
       transition: {
         type: "tweening",
         duration: 1,
-        delay: .4
-      }
-    }
+        delay: 0.4,
+      },
+    },
   };
 
   return (
@@ -69,6 +73,7 @@ export default function TechStack() {
           variants={stackVariants}
           initial="hidden"
           whileInView="show"
+          viewport={{ once: true }}
         >
           <motion.img
             src={HtmlLogo}
@@ -106,6 +111,12 @@ export default function TechStack() {
             className="max-h-16 md:max-h-16"
             whileHover={{ scale: 1.2 }}
           />
+          <motion.img
+            src={ReactLogo}
+            alt="React-Logo"
+            className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
+          />
         </motion.div>
       </div>
 
@@ -122,6 +133,7 @@ export default function TechStack() {
           variants={stackVariants}
           initial="hidden2"
           whileInView="show2"
+          viewport={{ once: true }}
         >
           <motion.img
             src={ExpressLogo}
@@ -147,6 +159,12 @@ export default function TechStack() {
             className="max-h-16 md:max-h-16"
             whileHover={{ scale: 1.2 }}
           />
+          <motion.img
+            src={GraphqlLogo}
+            alt="GraphQL-Logo"
+            className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
+          />
         </motion.div>
       </div>
 
@@ -159,10 +177,11 @@ export default function TechStack() {
         </span>
         <motion.div
           id="stack-icons-3"
-          className="grid grid-cols-2 gap-x-12 gap-y-5"
+          className="grid grid-cols-2 gap-x-8 md:gap-x-12 gap-y-12"
           variants={stackVariants}
           initial="hidden"
           whileInView="show3"
+          viewport={{ once: true }}
         >
           <motion.img
             src={GithubLogo}
@@ -173,6 +192,18 @@ export default function TechStack() {
           <motion.img
             src={SlackLogo}
             alt="Slack-Logo"
+            className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
+          />
+          <motion.img
+            src={InsomniaLogo}
+            alt="Insomnia-Logo"
+            className="max-h-16 md:max-h-16"
+            whileHover={{ scale: 1.2 }}
+          />
+          <motion.img
+            src={FramerLogo}
+            alt="Framer-Logo"
             className="max-h-16 md:max-h-16"
             whileHover={{ scale: 1.2 }}
           />

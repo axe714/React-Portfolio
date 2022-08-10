@@ -73,6 +73,7 @@ const works = projects.map((work) => (
     className="max-w-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
     initial={projectsVariant.hidden}
     whileInView={projectsVariant.show}
+    viewport={{once:true}}
   >
     <a href={work.link}>
       <img className="min-w-md rounded-t-lg" src={work.image} alt={work.name} />

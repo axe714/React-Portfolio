@@ -37,6 +37,7 @@ export default function AboutMe() {
       variants={aboutMeVariants}
       initial="hidden"
       whileInView="show"
+      viewport={{once:true}}
     >
       <div className="flex justify-center text-center">
         <h2 className="text-4xl font-bold font-['Poppins'] text-white leading-tight">
@@ -45,6 +46,7 @@ export default function AboutMe() {
             variants={aboutMeVariants}
             initial="hidden"
             whileInView="show"
+            viewport={{once:true}}
           >
             Hi, I'm Allec. Nice to meet you.
           </motion.span>
@@ -56,6 +58,7 @@ export default function AboutMe() {
         variants={aboutMeVariants}
         initial="hidden"
         whileInView="show2"
+        viewport={{once:true}}
       >
         <p className="pt-4 lg:px-64 text-center font-bold text-white leading-tight">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
