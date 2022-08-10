@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
-import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
 export default function renderHome() {
@@ -15,7 +14,6 @@ export default function renderHome() {
       <AboutMe />
       <TechStack />
       <Projects />
-      <ContactForm />
       <Footer />
     </div>
   );

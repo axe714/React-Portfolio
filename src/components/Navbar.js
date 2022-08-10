@@ -18,45 +18,45 @@ export default function Navbar() {
   const navVariants = {
     hidden: {
       opacity: 0,
-      x: -100
+      x: -100,
     },
     show: {
       opacity: 1,
       x: 0,
       transition: {
-        type:"tweening",
+        type: "tweening",
         delay: 0.15,
       },
     },
     show2: {
       opacity: 1,
-      x:0,
+      x: 0,
       transition: {
-        type:"tweening",
+        type: "tweening",
         delay: 0.25,
       },
     },
     show3: {
       opacity: 1,
-      x:0,
+      x: 0,
       transition: {
-        type:"tweening",
+        type: "tweening",
         delay: 0.35,
       },
     },
     show4: {
       opacity: 1,
-      x:0,
+      x: 0,
       transition: {
-        type:"tweening",
+        type: "tweening",
         delay: 0.45,
       },
     },
     show5: {
       opacity: 1,
-      x:0,
+      x: 0,
       transition: {
-        type:"tweening",
+        type: "tweening",
         delay: 0.55,
       },
     },
@@ -77,7 +77,7 @@ export default function Navbar() {
                 variants={navVariants}
                 initial="hidden"
                 whileInView="show"
-                viewport={{once:true}}
+                viewport={{ once: true }}
               >
                 Allec Arzadon
               </motion.span>
@@ -93,7 +93,7 @@ export default function Navbar() {
               variants={navVariants}
               initial="hidden"
               whileInView="show"
-              viewport={{once:true}}
+              viewport={{ once: true }}
             >
               About Me
             </motion.a>
@@ -104,7 +104,7 @@ export default function Navbar() {
               variants={navVariants}
               initial="hidden"
               whileInView="show2"
-              viewport={{once:true}}
+              viewport={{ once: true }}
             >
               Skills
             </motion.a>
@@ -115,7 +115,7 @@ export default function Navbar() {
               variants={navVariants}
               initial="hidden"
               whileInView="show3"
-              viewport={{once:true}}
+              viewport={{ once: true }}
             >
               Projects
             </motion.a>
@@ -126,18 +126,18 @@ export default function Navbar() {
               variants={navVariants}
               initial="hidden"
               whileInView="show4"
-              viewport={{once:true}}
+              viewport={{ once: true }}
             >
               Resume
             </motion.a>
             <motion.a
-              href="#contact-me-container"
+              href="/contactme"
               id="navbar-5"
               className={lgNav}
               variants={navVariants}
               initial="hidden"
               whileInView="show5"
-              viewport={{once:true}}
+              viewport={{ once: true }}
             >
               Contact Me
             </motion.a>
@@ -182,7 +182,7 @@ export default function Navbar() {
         <a href="#" className={smNav}>
           Resume
         </a>
-        <a href="#contact-me-container" className={smNav}>
+        <a href="/contactme" className={smNav}>
           Contact Me
         </a>
       </div>
