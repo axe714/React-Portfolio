@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import Navbar from "../components/Navbar";
@@ -49,25 +50,27 @@ const childrenVariants = {
 };
 
 export default function ContactForm() {
+  const [msgSent, setMsgSent] = useState(false);
+
   const emailHandler = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "gmail",
-        "template_4zxrppg",
-        e.target,
-        "iI99-_hxfIAExIwiM"
-      )
+      .sendForm("gmail", "template_4zxrppg", e.target, "iI99-_hxfIAExIwiM")
       .then(
         (result) => {
-          console.log(result.text);
+          if (result.text === "OK") {
+            setMsgSent(true);
+          }
         },
         (error) => {
-          console.log(error.text);
+          if (error) {
+            console.log("Something went wrong. Please try again!");
+          }
         }
       );
-      e.target.reset()
+
+    e.target.reset();
   };
 
   return (
@@ -145,14 +148,29 @@ export default function ContactForm() {
                     name="message"
                   ></textarea>
 
-                  <div className="flex items-end justify-end">
-                    <motion.button
-                      variants={childrenVariants}
-                      className="bg-blue-500 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded"
-                      type="submit"
-                    >
-                      Send
-                    </motion.button>
+                  <div className="flex justify-items-center items-end justify-end">
+                    <div className="pl-4 pr-2 pb-2 lg:mr-20">
+                      <motion.span
+                        className="text-red-800 font-medium"
+                        animate={msgSent ? "show" : "hidden"}
+                        variants={childrenVariants}
+                      >
+                        Thank you for the message! I will respond back as soon
+                        as I can.
+                      </motion.span>
+                    </div>
+                    <div className="pb-3 pr-3">
+                      <motion.button
+                        variants={childrenVariants}
+                        className="bg-blue-500 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded"
+                        type={msgSent ? null : "submit"}
+                      >
+                        {msgSent ? null : "Send"}
+                        <a href={msgSent ? "/" : null}>
+                          {msgSent ? "Home" : null}
+                        </a>
+                      </motion.button>
+                    </div>
                   </div>
                 </form>
               </div>

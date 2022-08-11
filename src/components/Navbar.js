@@ -1,10 +1,8 @@
 import React from "react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Navbar({ navItems }) {
-  const menuRef = useRef(null);
-  const mobileMenu = menuRef.current;
 
   const [isActive, setActive] = useState("false");
 
@@ -53,7 +51,7 @@ export default function Navbar({ navItems }) {
   ));
 
   const mobileNav = navItems.map((smNav) => (
-    <a href={smNav.name} className={smNavClass}>
+    <a href={smNav.link} className={smNavClass}>
       {smNav.name}
     </a>
   ));
@@ -111,7 +109,6 @@ export default function Navbar({ navItems }) {
 
       {/* mobile nav */}
       <div
-        ref={mobileMenu}
         className={isActive ? "hidden lg:hidden" : "lg:hidden"}
       >
         {mobileNav}
