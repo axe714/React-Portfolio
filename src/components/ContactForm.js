@@ -1,22 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const navItems = [
   {
     name: "Home",
-    link: "/"
+    link: "/",
   },
   {
     name: "Resume",
-    link: "#"
+    link: "#",
   },
   {
     name: "Contact Me",
-    link: "/contactme"
-  }
-]
+    link: "/contactme",
+  },
+];
 
 const contactVariants = {
   hidden: {
@@ -48,9 +49,30 @@ const childrenVariants = {
 };
 
 export default function ContactForm() {
+  const emailHandler = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_4zxrppg",
+        e.target,
+        "iI99-_hxfIAExIwiM"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+      e.target.reset()
+  };
+
   return (
     <>
-      <Navbar navItems={navItems}/>
+      <Navbar navItems={navItems} />
       <motion.div
         id="contact-me-container"
         className="min-h-xl py-48 lg:min-h-screen bg-white lg:py-0 flex flex-col justify-center"
@@ -73,7 +95,10 @@ export default function ContactForm() {
                 <hr className="mt-3 border-gray-300" />
               </motion.div>
               <div className="divide-y divide-gray-200">
-                <form className="pt-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7 -mb-8">
+                <form
+                  onSubmit={emailHandler}
+                  className="pt-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7 -mb-8"
+                >
                   <motion.label
                     variants={childrenVariants}
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -87,6 +112,7 @@ export default function ContactForm() {
                     id="grid-first-name"
                     type="text"
                     placeholder="Name"
+                    name="name"
                   />
 
                   <motion.label
@@ -102,6 +128,7 @@ export default function ContactForm() {
                     id="grid-first-name"
                     type="email"
                     placeholder="Email"
+                    name="email"
                   />
 
                   <motion.label
@@ -115,12 +142,14 @@ export default function ContactForm() {
                     required
                     className="resize-y py-3 px-4 border focus:outline-none rounded-md w-full bg-gray-200"
                     placeholder="Your message..."
+                    name="message"
                   ></textarea>
 
                   <div className="flex items-end justify-end">
                     <motion.button
                       variants={childrenVariants}
                       className="bg-blue-500 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded"
+                      type="submit"
                     >
                       Send
                     </motion.button>

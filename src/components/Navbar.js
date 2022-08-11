@@ -12,7 +12,7 @@ export default function Navbar({ navItems }) {
     setActive(!isActive);
   };
 
-  const lgNavClass = `font-['Manrope'] text-lg py-5 px-12 text-gray-700 transform hover:scale-110 hover:text-blue-500 transition-all`;
+  const lgNavClass = `font-['Manrope'] text-lg py-5 px-12 text-gray-700 transform hover:underline hover:underline-offset-8 hover:scale-110 hover:underline-blue-500 transition-all`;
   const smNavClass = `font-['Manrope'] text-md md:text-lg block py-2 px-4 hover:bg-sky-100 hover:text-blue-900 transition-all`;
 
   const navVariants = {

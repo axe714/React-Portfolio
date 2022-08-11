@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="p-4 bg-white sm:p-6">
       <hr className="my-6 border-blue-700 sm:mx-auto dark:border-blue-700 lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-black">
+        <span className="text-sm text-black sm:text-center">
           Allec Arzadon © 2022. All Rights Reserved.
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
