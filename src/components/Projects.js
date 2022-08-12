@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import OldEggImg from "../images/oldegg-landing-page.png";
-import StargazerImg from "../images/stargazer-demo.png";
+import StargazerImg from "../images/stargazer-demo.PNG";
 import TechSpotImg from "../images/tech-spot-demo.jpg";
 import TeamGeneratorImg from "../images/team-generator-demo.png";
 import EmployeeTrackerImg from "../images/employee-tracker-demo.jpg";

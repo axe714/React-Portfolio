@@ -42,8 +42,8 @@ export default function Navbar({ navItems }) {
 
   const largeNav = navItems.map((lgNav) =>
     lgNav?.link.includes("/") ? (
-      <Link to={lgNav.link}>
-        <motion.span className={lgNavClass} variants={childrenVariant}>
+      <Link to={lgNav.link} className={lgNavClass}>
+        <motion.span variants={childrenVariant}>
           {lgNav.name}
         </motion.span>
       </Link>
@@ -58,11 +58,17 @@ export default function Navbar({ navItems }) {
     )
   );
 
-  const mobileNav = navItems.map((smNav) => (
-    <a href={smNav.link} className={smNavClass}>
-      {smNav.name}
-    </a>
-  ));
+  const mobileNav = navItems.map((smNav) =>
+    smNav?.link.includes("/") ? (
+      <Link to={smNav.link} className={smNavClass}>
+        <span>{smNav.name}</span>
+      </Link>
+    ) : (
+      <a href={smNav.link} className={smNavClass}>
+        {smNav.name}
+      </a>
+    )
+  );
 
   return (
     <nav className="bg-white">

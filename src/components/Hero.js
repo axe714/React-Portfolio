@@ -66,7 +66,7 @@ export default function Hero() {
             >
               <motion.span
                 variants={childrenVariant}
-                className="font-['Poppins'] break-words text-lg font-extrabold text-center md:pt-4 lg:text-xl"
+                className="font-['Poppins'] break-words text-lg font-black text-center md:pt-4 lg:text-xl"
               >
                 A full stack developer with a passion for collaborating with
                 others to construct and refine various applications for the
