@@ -89,7 +89,7 @@ export default function Navbar({ navItems }) {
           <div className="flex items-center lg:hidden">
             <button onClick={mobileBtnHandler} className="mobile-menu-button">
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 mr-3"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

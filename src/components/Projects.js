@@ -116,9 +116,9 @@ export default function Projects() {
       <div className="flex justify-center text-center">
         <h2
           id="projects-header"
-          className="mb-16 text-4xl font-['Manrope'] font-bold text-blue-900 leading-tight"
+          className="mb-16 font-['Manrope'] font-bold text-blue-900 leading-tight"
         >
-          <motion.span className="text-3xl">My Recent Work</motion.span>
+          <motion.span className="text-2xl">My Recent Work</motion.span>
         </h2>
       </div>
 

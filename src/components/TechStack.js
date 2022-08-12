@@ -58,7 +58,7 @@ export default function TechStack() {
   return (
     <div
       id="tech-stack-container"
-      className="bg-white grid grid-rows-3 -mt-48 mx-8 divide-y md:grid-rows-none md:grid-cols-3 md:mx-16 md:divide-x rounded-lg outline outline-sky-100"
+      className="bg-white grid grid-rows-3 -mt-32 mx-8 divide-y md:grid-rows-none md:grid-cols-3 md:mx-16 md:divide-x rounded-lg outline outline-sky-100"
     >
       <div className="flex flex-col place-items-center md:justify-center md:items-center text-center h-auto py-5 px-5">
         <span
