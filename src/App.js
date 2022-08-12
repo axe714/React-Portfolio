@@ -23,7 +23,7 @@ const App = () => (
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/contactme" element={<ContactMe navItems={navItems} />} />
+      <Route path="contactme" element={<ContactMe navItems={navItems} />} />
     </Routes>
   </Router>
 );

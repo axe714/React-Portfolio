@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Navbar({ navItems }) {
-
   const [isActive, setActive] = useState("false");
 
   const mobileBtnHandler = () => {
@@ -40,15 +40,23 @@ export default function Navbar({ navItems }) {
     },
   };
 
-  const largeNav = navItems.map((lgNav) => (
-    <motion.a
-      href={lgNav.link}
-      className={lgNavClass}
-      variants={childrenVariant}
-    >
-      {lgNav.name}
-    </motion.a>
-  ));
+  const largeNav = navItems.map((lgNav) =>
+    lgNav?.name.includes("/") ? (
+      <Link to={lgNav.link}>
+        <motion.span className={lgNavClass} variants={childrenVariant}>
+          {lgNav.name}
+        </motion.span>
+      </Link>
+    ) : (
+      <motion.a
+        href={lgNav.link}
+        className={lgNavClass}
+        variants={childrenVariant}
+      >
+        {lgNav.name}
+      </motion.a>
+    )
+  );
 
   const mobileNav = navItems.map((smNav) => (
     <a href={smNav.link} className={smNavClass}>
@@ -66,9 +74,9 @@ export default function Navbar({ navItems }) {
       >
         <div className="flex items-center justify-between">
           <div className="flex space-x-3">
-            <a
+            <Link
               id="navbar-logo"
-              href="/"
+              to="/"
               className="flex items-center py-5 px-2 text-gray-800 md:pr-12"
             >
               <motion.span
@@ -77,7 +85,7 @@ export default function Navbar({ navItems }) {
               >
                 Allec Arzadon
               </motion.span>
-            </a>
+            </Link>
           </div>
 
           {/* large screen nav */}
@@ -108,9 +116,7 @@ export default function Navbar({ navItems }) {
       </motion.div>
 
       {/* mobile nav */}
-      <div
-        className={isActive ? "hidden lg:hidden" : "lg:hidden"}
-      >
+      <div className={isActive ? "hidden lg:hidden" : "lg:hidden"}>
         {mobileNav}
       </div>
     </nav>
