@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f01e4f5c.css",
-    "main.js": "/static/js/main.f32ffa58.js",
+    "main.js": "/static/js/main.405c7b0c.js",
     "static/media/stargazer-demo.PNG": "/static/media/stargazer-demo.a6df379854d978ae1713.PNG",
     "static/media/employee-tracker-demo.jpg": "/static/media/employee-tracker-demo.ed6a0941c0ccfdff6f65.jpg",
     "static/media/team-generator-demo.png": "/static/media/team-generator-demo.430fb07e51fcd5367b59.png",
@@ -27,10 +27,10 @@
     "index.html": "/index.html",
     "static/media/framer.svg": "/static/media/framer.2287efa09a38b7812787f92a5fcd95b6.svg",
     "main.f01e4f5c.css.map": "/static/css/main.f01e4f5c.css.map",
-    "main.f32ffa58.js.map": "/static/js/main.f32ffa58.js.map"
+    "main.405c7b0c.js.map": "/static/js/main.405c7b0c.js.map"
   },
   "entrypoints": [
     "static/css/main.f01e4f5c.css",
-    "static/js/main.f32ffa58.js"
+    "static/js/main.405c7b0c.js"
   ]
 }
