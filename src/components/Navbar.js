@@ -42,8 +42,8 @@ export default function Navbar({ navItems }) {
 
   const largeNav = navItems.map((lgNav) =>
     lgNav?.link.includes("/") ? (
-      <Link to={lgNav.link}>
-        <motion.span className={lgNavClass} variants={childrenVariant}>
+      <Link className={lgNavClass} to={lgNav.link}>
+        <motion.span variants={childrenVariant}>
           {lgNav.name}
         </motion.span>
       </Link>
