@@ -77,8 +77,8 @@ export default function ContactForm() {
     <>
       <Navbar navItems={navItems} />
       <motion.div
-        id="contact-me-container"
-        className="min-h-xl py-48 lg:min-h-screen bg-white lg:py-0 flex flex-col justify-center"
+        id="contact-me-container"  
+        className="min-h-xl pt-10 pb-36 lg:min-h-screen bg-white flex flex-col justify-center"
         variants={contactVariants}
         initial="hidden"
         whileInView="show"
