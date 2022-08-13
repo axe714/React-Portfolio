@@ -58,11 +58,17 @@ export default function Navbar({ navItems }) {
     )
   );
 
-  const mobileNav = navItems.map((smNav) => (
-    <a href={smNav.link} className={smNavClass}>
-      {smNav.name}
-    </a>
-  ));
+  const mobileNav = navItems.map((smNav) =>
+    smNav?.link.includes("/") ? (
+      <Link to={smNav.link} className={smNavClass}>
+        <span>{smNav.name}</span>
+      </Link>
+    ) : (
+      <a href={smNav.link} className={smNavClass}>
+        {smNav.name}
+      </a>
+    )
+  );
 
   return (
     <nav className="bg-white">
