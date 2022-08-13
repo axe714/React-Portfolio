@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f63f332.css",
-    "main.js": "/static/js/main.c9bff3c7.js",
+    "main.css": "/static/css/main.1e2d8421.css",
+    "main.js": "/static/js/main.1f768c6f.js",
     "static/media/stargazer-demo.png": "/static/media/stargazer-demo.a6df379854d978ae1713.png",
     "static/media/employee-tracker-demo.jpg": "/static/media/employee-tracker-demo.ed6a0941c0ccfdff6f65.jpg",
     "static/media/team-generator-demo.png": "/static/media/team-generator-demo.430fb07e51fcd5367b59.png",
@@ -26,11 +26,11 @@
     "static/media/linkedinlogo.svg": "/static/media/linkedinlogo.9bd7e6453c3131532672b02aba2bcf26.svg",
     "index.html": "/index.html",
     "static/media/framer.svg": "/static/media/framer.2287efa09a38b7812787f92a5fcd95b6.svg",
-    "main.9f63f332.css.map": "/static/css/main.9f63f332.css.map",
-    "main.c9bff3c7.js.map": "/static/js/main.c9bff3c7.js.map"
+    "main.1e2d8421.css.map": "/static/css/main.1e2d8421.css.map",
+    "main.1f768c6f.js.map": "/static/js/main.1f768c6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f63f332.css",
-    "static/js/main.c9bff3c7.js"
+    "static/css/main.1e2d8421.css",
+    "static/js/main.1f768c6f.js"
   ]
 }
