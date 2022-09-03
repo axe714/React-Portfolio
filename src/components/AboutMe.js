@@ -60,7 +60,7 @@ export default function AboutMe() {
         whileInView="show2"
         viewport={{ once: true }}
       >
-        <p className="leading-8 tracking-wide lg:px-64 text-center font-bold text-white leading-tight">
+        <p className="tracking-wide lg:px-64 text-center font-bold text-white leading-tight">
           Stepping out of my comfort zone in March 2022, I transitioned from the medical field
           to software/web development, fell in love with the process of
           learning, creating, experimenting {'&'} even failing.... and haven't

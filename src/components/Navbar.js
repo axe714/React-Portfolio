@@ -40,9 +40,9 @@ export default function Navbar({ navItems }) {
     },
   };
 
-  const largeNav = navItems.map((lgNav) =>
+  const largeNav = navItems.map((lgNav, i) =>
     lgNav?.link.includes("/") ? (
-      <Link className={lgNavClass} to={lgNav.link}>
+      <Link className={lgNavClass} to={lgNav.link} key={`Nav item ${i}`}>
         <motion.span variants={childrenVariant}>
           {lgNav.name}
         </motion.span>
@@ -52,19 +52,20 @@ export default function Navbar({ navItems }) {
         href={lgNav.link}
         className={lgNavClass}
         variants={childrenVariant}
+        key={`Nav item ${i}`}
       >
         {lgNav.name}
       </motion.a>
     )
   );
 
-  const mobileNav = navItems.map((smNav) =>
+  const mobileNav = navItems.map((smNav, i) =>
     smNav?.link.includes("/") ? (
-      <Link to={smNav.link} className={smNavClass}>
+      <Link to={smNav.link} className={smNavClass} key={`Nav item ${i}`}>
         <span>{smNav.name}</span>
       </Link>
     ) : (
-      <a href={smNav.link} className={smNavClass}>
+      <a href={smNav.link} className={smNavClass} key={`Nav item ${i}`}>
         {smNav.name}
       </a>
     )
@@ -110,9 +111,9 @@ export default function Navbar({ navItems }) {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
               </svg>

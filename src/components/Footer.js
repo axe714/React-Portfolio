@@ -15,12 +15,13 @@ const footerIcons = [
   }
 ]
 
-const footerItems = footerIcons.map((footer) => (
+const footerItems = footerIcons.map((footer, i) => (
   <a
   href={footer.link}
+  key={`Footer item ${i}`}
   className="text-gray-500 hover:text-black dark:hover:text-white"
 >
-  <img src={footer.image} className="w-5 h-5" />
+  <img src={footer.image} className="w-5 h-5" alt={`footer logo ${i}`}/>
   <span className="sr-only">{footer.name + " account"}</span>
 </a>
 ))
