@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "netlify deploy --prod"
+    "deploy": "netlify deploy --prod",
+    "pages:deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

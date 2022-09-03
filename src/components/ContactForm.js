@@ -77,7 +77,7 @@ export default function ContactForm() {
     <>
       <Navbar navItems={navItems} />
       <motion.div
-        id="contact-me-container"  
+        id="contact-me-container"
         className="min-h-xl pt-10 pb-36 lg:min-h-screen bg-white flex flex-col justify-center"
         variants={contactVariants}
         initial="hidden"
@@ -90,10 +90,10 @@ export default function ContactForm() {
               <motion.div variants={childrenVariants}>
                 <h1 className="text-3xl font-extrabold">Contact</h1>
                 <p className="mt-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam nec auctor lectus. Nulla mattis tempus tellus, vel
-                  pulvinar risus efficitur at. Sed condimentum nunc vel nisl
-                  luctus, sit amet blandit.
+                  Interested in collaborating? Or perhaps have any questions or
+                  maybe just want to chat.. Please don't hesitate to contact me
+                  below. I'm always looking for opportunities and won't pass up
+                  the chance to network and connect with others!
                 </p>
                 <hr className="mt-3 border-gray-300" />
               </motion.div>

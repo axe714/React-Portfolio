@@ -108,13 +108,19 @@ export default function TechStack() {
           <motion.img
             src={TailwindLogo}
             alt="Tailwind-Logo"
-            className="max-h-16 md:max-h-16"
+            className="max-h-16 w-20"
+            whileHover={{ scale: 1.2 }}
+          />
+          <motion.img
+            src={FramerLogo}
+            alt="Framer-Logo"
+            className="max-h-16 w-20"
             whileHover={{ scale: 1.2 }}
           />
           <motion.img
             src={ReactLogo}
             alt="React-Logo"
-            className="max-h-16 md:max-h-16"
+            className="max-h-16"
             whileHover={{ scale: 1.2 }}
           />
         </motion.div>
@@ -198,12 +204,6 @@ export default function TechStack() {
           <motion.img
             src={InsomniaLogo}
             alt="Insomnia-Logo"
-            className="max-h-16 md:max-h-16"
-            whileHover={{ scale: 1.2 }}
-          />
-          <motion.img
-            src={FramerLogo}
-            alt="Framer-Logo"
             className="max-h-16 md:max-h-16"
             whileHover={{ scale: 1.2 }}
           />
