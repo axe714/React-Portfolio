@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.1e2d8421.css",
-    "main.js": "/static/js/main.1f768c6f.js",
-    "static/media/stargazer-demo.png": "/static/media/stargazer-demo.a6df379854d978ae1713.png",
+    "main.js": "/static/js/main.f622efc1.js",
+    "static/media/stargazer-demo.PNG": "/static/media/stargazer-demo.8922e20cd91dc8cf41bf.PNG",
     "static/media/employee-tracker-demo.jpg": "/static/media/employee-tracker-demo.ed6a0941c0ccfdff6f65.jpg",
     "static/media/team-generator-demo.png": "/static/media/team-generator-demo.430fb07e51fcd5367b59.png",
     "static/media/oldegg-landing-page.png": "/static/media/oldegg-landing-page.815f0f44bb791137435c.png",
     "static/media/tech-spot-demo.jpg": "/static/media/tech-spot-demo.97b533b5001671e1a41b.jpg",
-    "static/media/weathertracker-demo.png": "/static/media/weathertracker-demo.78ca75247c4383d60157.png",
+    "static/media/no-free-toes-scheduler-demo.png": "/static/media/no-free-toes-scheduler-demo.96234b4ecb437cc1e67a.png",
     "static/media/tailwind.png": "/static/media/tailwind.9187d687b1f8eca87146.png",
     "static/media/nodejs.svg": "/static/media/nodejs.5a3a9ca294db0539884810b6e6eafedd.svg",
     "static/media/express.svg": "/static/media/express.7e85c5130978e3593e65a44112bc7390.svg",
@@ -25,12 +25,13 @@
     "static/media/insomnia.svg": "/static/media/insomnia.c463712ef92fc4a91756ffa6f3a34c78.svg",
     "static/media/linkedinlogo.svg": "/static/media/linkedinlogo.9bd7e6453c3131532672b02aba2bcf26.svg",
     "index.html": "/index.html",
+    "static/media/portfolio.svg": "/static/media/portfolio.3133e9aa9efcd02645a017747e4b94a9.svg",
     "static/media/framer.svg": "/static/media/framer.2287efa09a38b7812787f92a5fcd95b6.svg",
     "main.1e2d8421.css.map": "/static/css/main.1e2d8421.css.map",
-    "main.1f768c6f.js.map": "/static/js/main.1f768c6f.js.map"
+    "main.f622efc1.js.map": "/static/js/main.f622efc1.js.map"
   },
   "entrypoints": [
     "static/css/main.1e2d8421.css",
-    "static/js/main.1f768c6f.js"
+    "static/js/main.f622efc1.js"
   ]
 }
