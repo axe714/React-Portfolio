@@ -1,8 +1,14 @@
 import React from "react";
 import linkedInLogo from "../images/icons/linkedinlogo.svg"
 import githubLogo from "../images/icons/github.svg"
+import portfolioLogo from "../images/icons/portfolio.svg"
 
 const footerIcons = [
+  {
+    name: "Portfolio",
+    image: portfolioLogo,
+    link: "https://docs.google.com/document/d/1GlX9IWj3oIDwtuRV4WDJiATRKh3HPzcI/edit?usp=sharing&ouid=117977372573934894868&rtpof=true&sd=true"
+  },
   {
     name: "Github",
     image: githubLogo,
@@ -11,7 +17,7 @@ const footerIcons = [
   {
     name: "Linkedin",
     image: linkedInLogo,
-    link: "https://www.linkedin.com/in/allec-arzadon-aa4838231/"
+    link: "https://www.linkedin.com/in/allec-arzadon-222b9a249/"
   }
 ]
 

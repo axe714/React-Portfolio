@@ -41,7 +41,7 @@ export default function Navbar({ navItems }) {
   };
 
   const largeNav = navItems.map((lgNav, i) =>
-    lgNav?.link.includes("/") ? (
+    lgNav?.link.includes("contact") ? (
       <Link className={lgNavClass} to={lgNav.link} key={`Nav item ${i}`}>
         <motion.span variants={childrenVariant}>
           {lgNav.name}
@@ -60,7 +60,7 @@ export default function Navbar({ navItems }) {
   );
 
   const mobileNav = navItems.map((smNav, i) =>
-    smNav?.link.includes("/") ? (
+    smNav?.link.includes("contact") ? (
       <Link to={smNav.link} className={smNavClass} key={`Nav item ${i}`}>
         <span>{smNav.name}</span>
       </Link>

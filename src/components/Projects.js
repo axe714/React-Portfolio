@@ -1,17 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
 import OldEggImg from "../images/oldegg-landing-page.png";
-import StargazerImg from "../images/stargazer-demo.png";
+import StargazerImg from "../images/stargazer-demo.PNG";
 import TechSpotImg from "../images/tech-spot-demo.jpg";
 import TeamGeneratorImg from "../images/team-generator-demo.png";
 import EmployeeTrackerImg from "../images/employee-tracker-demo.jpg";
-import WeatherTrackerImg from "../images/weathertracker-demo.png";
+import NFTSchedulerImg from "../images/no-free-toes-scheduler-demo.png";
 
 const projects = [
   {
+    name: "No Free Toes Scheduler",
+    image: NFTSchedulerImg,
+    description:
+      "A full stack application developed to solve all your scheduling needs!",
+    link: "https://nofreetoes.herokuapp.com/",
+  },
+  {
     name: "OldEgg",
     image: OldEggImg,
-    description: "E-commerce website that sells computer parts.",
+    description: "A full stack e-commerce website that sells computer parts.",
     link: "https://oldegg.herokuapp.com/",
   },
   {
@@ -19,7 +26,7 @@ const projects = [
     image: StargazerImg,
     description: `NASA's view of the galaxy. Utilizes NASA's APOD API to deliver
     pictures for you to enjoy.`,
-    link: "https://github.com/axe714/StarGazer",
+    link: "https://axe714.github.io/StarGazer/",
   },
   {
     name: "TechSpot",
@@ -42,13 +49,6 @@ const projects = [
       "Keep track of your employees using this CLI application built entirely using Node.",
     link: "https://github.com/axe714/Employee-Tracker",
   },
-  {
-    name: "Weather Tracker",
-    image: WeatherTrackerImg,
-    description:
-      "View the 7-day weather forecast of the city of your choosing.",
-    link: "https://github.com/axe714/Weather-Tracker",
-  },
 ];
 
 const projectsVariant = {
@@ -70,14 +70,14 @@ const projectsVariant = {
 
 const works = projects.map((work, i) => (
   <motion.div
-    className="max-w-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+    className="max-w-md max-h-md bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
     initial={projectsVariant.hidden}
     whileInView={projectsVariant.show}
-    viewport={{once:true}}
+    viewport={{ once: true }}
     key={`Project ${i}`}
   >
     <a href={work.link}>
-      <img className="min-w-md rounded-t-lg" src={work.image} alt={work.name} />
+      <img className="rounded-t-lg h-3/4" src={work.image} alt={work.name} />
     </a>
     <div className="p-5">
       <a href={work.link}>
