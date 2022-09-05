@@ -43,9 +43,11 @@ export default function Navbar({ navItems }) {
   const largeNav = navItems.map((lgNav, i) =>
     lgNav?.link.includes("contact") ? (
       <Link className={lgNavClass} to={lgNav.link} key={`Nav item ${i}`}>
-        <motion.span variants={childrenVariant}>
+        <motion.div variants={childrenVariant}>
+        <span>
           {lgNav.name}
-        </motion.span>
+        </span>
+        </motion.div>
       </Link>
     ) : (
       <motion.a
