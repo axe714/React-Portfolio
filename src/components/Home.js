@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import AboutMe from "./components/AboutMe";
-import TechStack from "./components/TechStack";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import AboutMe from "./AboutMe";
+import TechStack from "./TechStack";
+import Projects from "./Projects";
+import Footer from "./Footer";
 
 const navItems = [
   {
