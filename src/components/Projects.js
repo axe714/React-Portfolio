@@ -77,7 +77,7 @@ const works = projects.map((work, i) => (
     key={`Project ${i}`}
   >
     <a href={work.link}>
-      <img className="rounded-t-lg h-3/4" src={work.image} alt={work.name} />
+      <img className="rounded-t-lg" src={work.image} alt={work.name} />
     </a>
     <div className="p-5">
       <a href={work.link}>
