@@ -21,7 +21,7 @@ const navItems = [
   },
   {
     name: "Resume",
-    link: "https://docs.google.com/document/d/1GlX9IWj3oIDwtuRV4WDJiATRKh3HPzcI/edit?usp=sharing&ouid=117977372573934894868&rtpof=true&sd=true"
+    link: "https://docs.google.com/document/d/1Wqz3wxS2hD3IwVqkAK7fvU93CmIKVD9XtaVOhBSXG90/edit?usp=sharing"
   },
   {
     name: "Contact Me",
