@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function Navbar({ navItems }) {
-  const [isActive, setActive] = useState("false");
+  const [isActive, setActive] = useState(false);
 
   const mobileBtnHandler = () => {
     setActive(!isActive);

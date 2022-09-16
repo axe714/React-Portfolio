@@ -21,7 +21,7 @@ const navItems = [
   },
   {
     name: "Resume",
-    link: "https://docs.google.com/document/d/1Wqz3wxS2hD3IwVqkAK7fvU93CmIKVD9XtaVOhBSXG90/edit?usp=sharing"
+    link: "https://docs.google.com/document/d/1AC-r3RoH8RxyWb_SXknsjX861SFYSEC8/edit?usp=sharing&ouid=111327582377266221889&rtpof=true&sd=true"
   },
   {
     name: "Contact Me",
@@ -31,7 +31,7 @@ const navItems = [
 
 export default function renderHome() {
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-screen">
       <Navbar navItems={navItems}/>
       <Hero />
       <AboutMe />
